@@ -1,0 +1,252 @@
+package alprouas;
+import javax.swing.*;
+public class LatihanBendera {
+    public static void main(String[] args) {
+        int line = 5;
+//Segitigasampingkiri
+        for (int i = 0; i < line ; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("+");
+            }
+        System.out.println("0");            
+        }
+        System.out.println();
+        
+//Segitigasampingkiri2
+        for (int i = 0; i < line ; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+        System.out.println("^");            
+        }
+        System.out.println();
+        
+//tdk kosong atas kanan
+        for (int i = 1; i <= line ; i++) {
+            for (int j = 1; j <= line; j++) {
+                if (i<=j) System.out.print("*");
+                else System.out.print("-");
+            }
+        System.out.println();            
+        }
+        System.out.println();
+        
+//tdkkosongbawahkiri
+        for (int i = 1; i <= line ; i++) {
+            for (int j = 1; j <= line; j++) {
+                if (i>j) System.out.print("*");
+                else System.out.print("-");
+            }
+        System.out.println();            
+        }        
+        System.out.println();
+
+        //5x5
+        for (int i = 0; i < line ; i++) {
+            for (int j = 0; j < line; j++) {
+                System.out.print("* ");
+            }
+        System.out.println();            
+        }
+        System.out.println();
+        
+//punya Lana
+        for (int i = 1; i <= line; i++) {
+            for (int j = 1; j <= line; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5 || i == 3 && j == 3) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("\n");
+
+//macem-macem segitiga
+        for (int i = 1; i <= line; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("1");
+            }
+
+            for (int k = line; k >= i; k--) {
+                System.out.print("2");
+            }
+
+            for (int l = line; l >= i; l--) {
+                System.out.print("3");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print("4");
+            }
+            System.out.println();
+        }
+
+//Belah ketupat
+        System.out.println();
+        for (int i = 0; i <= line; i++) {
+            for (int j = line; j >= i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        for (int i = 0; i <= line; i++) {
+            System.out.print(" ");
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = line; j >= i; j--) {
+                System.out.print("*");
+            }
+            for (int j = line - 1; j >= i; j--) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+//punya Arip
+        System.out.println("*");
+        for (int i = 1; i <= line - 1; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("!");
+            }
+            System.out.print("*\n");
+        }
+        System.out.println("");
+
+//huruf T
+        for (int i = 1; i <= line; i++) {
+            for (int j = 1; j <= line; j++) {
+                if (i == 1 && j >= 1 || j == 3 && i >= 2) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
+        System.out.println("");
+
+// Huruf N
+        for (int i = 0; i < line; i++) {
+            System.out.print("*");
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            for (int j = line - 1; j >= i; j--) {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            System.out.println("");
+        }        
+        System.out.println("");
+        
+//huruf D
+        for (int i = 1; i <= line; i++) {
+            for (int j = 1; j <= line; j++) {
+                if ((i >= 1 && j == 1) || ((i == 1 || i == 5) && j == 2) || ((i == 1 || i == 5) && j == 3) || ((i == 1 || i == 5) && j == 4) || ((i >= 2 && i <= 4) && j == 5) || ((i == 2 || i == 4) && j == 4)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
+        System.out.println();
+        
+        int[] data = new int[5];
+        //angka nol
+        for (int i = 1; i <= data.length; i++) {
+            for (int j = 1; j <= data.length; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        
+        System.out.println();
+        
+//Delapan/jendela
+        int[] data1 = new int[5];
+        for (int i = 1; i <= data1.length; i++) {
+            for (int j = 1; j <= data1.length; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5 || i == 3 || j == 3) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+        
+//nol titik tengah
+        int[] data2 = new int[5];
+        for (int i = 1; i <= data2.length; i++) {
+            for (int j = 1; j <= data2.length; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5) {
+                    System.out.print("*");
+                } else if (i == 3 && j == 3) {
+                    System.out.print("3");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+        
+        int[] data4 = new int[5];
+        //pita 3 tengah
+        for (int i = 1; i <= data4.length; i++) {
+            for (int j = 1; j <= data4.length; j++) {
+                if (i == 1 && j < 5 && j > 1 || i != 3 && j == 3 || i == 5 && j > 1 && j < 5) {
+                    System.out.print(" ");
+                } else if (i == 3 && j == 3) {
+                    System.out.print("3");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+        
+        //bentuk        
+        int[] data5 = new int[5];
+        for (int i = 1; i <= data5.length; i++) {
+            for (int j = 1; j <= data5.length; j++) {
+                if (i == j || i == 1 && j == 5 || i == 2 && j == 4 || i == 3 && j == 3 || i == 4 && j == 2 || i == 5 && j == 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+        
+        //X dalam kotak        
+        int[] data6 = new int[5];
+        for (int i = 1; i <= data6.length; i++) {
+            for (int j = 1; j <= data6.length; j++) {
+                if (i == 2 && j == 3 || i == 3 && j == 2 || i == 3 && j == 4 || i == 4 && j == 3) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }        
+}
+}
